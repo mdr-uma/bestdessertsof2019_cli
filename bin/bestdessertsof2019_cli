@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require_relative '../lib/bestdessertsof2019_cli'
+
+Bestdessertsof2019Cli::CLI.new.call
