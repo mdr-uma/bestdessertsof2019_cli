@@ -3,7 +3,6 @@
 require "bundler/setup"
 require "bestdessertsof2019_cli"
 
-puts "Hello World"
 
 
 # You can add fixtures and/or initialization code here to make experimenting
