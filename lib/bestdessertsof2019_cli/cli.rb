@@ -2,10 +2,29 @@ class Bestdessertsof2019Cli::CLI
   
   def call
     puts "Welcome to Best Desserts of 2019!" 
-    list_of_desserts
-    options
+    option_1
+    # list_of_desserts
+    # options
     # closing
   end
+  
+    def option_1
+    puts "Take a quick peek at some tasty desserts?"
+    puts "Enter: yes / no"
+    input = nil 
+    while input != "exit"
+      input = gets.strip.downcase
+      if input == "yes"
+        list_of_desserts
+      elsif input == "no" || "exit"
+        input = "exit"
+        closing
+      else
+        puts "Invalid entry. Please enter yes or no"
+      end 
+    end
+  end 
+  
   
   def list_of_desserts
     puts "Here are the Lists!"
@@ -17,9 +36,11 @@ class Bestdessertsof2019Cli::CLI
     4.rosted caramel puff
     5.french roll
     Doc
+    
+    option_2
   end
   
-  def options
+  def option_2
 
     input = nil
     while input != "exit"
@@ -39,15 +60,17 @@ class Bestdessertsof2019Cli::CLI
       elsif input == "list"
         list_of_desserts
       elsif input == "exit"
-        puts "Thank you for visiting. See you soon..."
+        input = "exit"
+        closing
+        # puts "Thank you for visiting. See you soon..."
       else 
-        puts "That number does not exit, please enter right number or type exit."
+        puts "That number does not exist, please enter right number or type exit."
       end
     end
   end
     
     def closing
-    puts "Thank you for visiting. See you soon..."
+      puts "Thank you for visiting. See you soon..."
     end
   
 end
