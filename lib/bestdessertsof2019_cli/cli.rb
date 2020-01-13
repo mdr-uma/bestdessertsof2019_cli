@@ -27,16 +27,17 @@ class Bestdessertsof2019Cli::CLI
   
   
   def list_of_desserts
-    puts "Here are the Lists!"
-    puts <<-Doc.gsub /^\s*/, ''
+    # puts "Here are the Lists!"
+    # puts <<-Doc.gsub /^\s*/, ''
     
-    1.brownie
-    2.apple pie
-    3.blueberry cookie
-    4.rosted caramel puff
-    5.french roll
-    Doc
+    # 1.brownie
+    # 2.apple pie
+    # 3.blueberry cookie
+    # 4.rosted caramel puff
+    # 5.french roll
+    # Doc
     
+    @desserts = Bestdessertsof2019Cli::Dessert.all
     option_2
   end
   
