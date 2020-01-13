@@ -65,7 +65,7 @@ class Bestdessertsof2019Cli::CLI
         closing
         # puts "Thank you for visiting. See you soon..."
       else 
-        puts "That number does not exist, please enter right number or type exit."
+        puts "That number does not exist, please enter right a number."
       end
     end
   end

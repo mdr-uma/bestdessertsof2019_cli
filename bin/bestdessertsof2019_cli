@@ -2,7 +2,7 @@
 #puts "Hello World"
 
 require_relative '../lib/bestdessertsof2019_cli'
-require "bundler/setup"
-require "bestdessertsof2019_cli"
+#require "bundler/setup"
+#require "bestdessertsof2019_cli"
 
 Bestdessertsof2019Cli::CLI.new.call
