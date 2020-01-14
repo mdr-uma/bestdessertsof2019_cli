@@ -30,28 +30,31 @@ class Bestdessertsof2019Cli::CLI
   
   def list_of_desserts
     @desserts = Bestdessertsof2019Cli::Dessert.list
-    @desserts.each do |list|
+     @desserts.each do |list|
       # binding.pry
-      # puts "#{list.name}"
-    end
-    # option_2
+       puts "#{list}"
+     end
+     option_2
   end
   
-  # def option_2
-  #   input = nil
-  #   while input != "exit"
-  #     puts "If you want any more info about particular dish, enter number of that dish or type list to see the all list again or type exit:"
-  #       input = gets.strip
+  def option_2
+    input = nil
+    while input != "exit"
+      puts "If you want any more info about particular dish, enter number of that dish or type list to see the all list again or type exit:"
+        input = gets.strip
         
-  #       if input.to_i > 0
-  #         puts @desserts[input.to_i - 1]
-  #       elsif input == "list"
-  #       list_of_desserts
-  #       else 
-  #       puts "That number does not exist, please enter a right number."
-  #     end
-  #     end
-  #   end
+        if input.to_i > 0
+          puts @desserts[input.to_i - 1]
+        elsif input == "list"
+        list_of_desserts
+        elsif 
+          input = "exit"
+          closing
+        else 
+        puts "That number does not exist, please enter a right number."
+      end
+      end
+    end
 
       # if input == "1"
       #   puts "more info on 1.."
