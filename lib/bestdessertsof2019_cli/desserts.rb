@@ -26,12 +26,9 @@ class Bestdessertsof2019Cli::Dessert
   end
   
   def self.scrape_purewow
-    # doc = Nokogiri::HTML(open("https://www.purewow.com/food/best-desserts-2019"))
-     doc = Nokogiri::HTML(open("https://www.cnn.com/travel/article/world-50-best-desserts/index.html"))
+     doc = Nokogiri::HTML(open("https://www.purewow.com/food/best-desserts-2019"))
      list = self.new
-    # list.name = doc.css("h2.firsth2").text.strip
-    list.name = doc.css("span h3").text
-    
+     list.name = doc.css(".description").collect {|heading| heading.css("h2").text}
     # binding.pry
   end
   
