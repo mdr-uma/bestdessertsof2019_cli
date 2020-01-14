@@ -12,17 +12,18 @@ class Bestdessertsof2019Cli::CLI
     puts "Take a quick peek at some tasty desserts?"
     puts "Enter: yes / no"
     input = nil 
-    while input != "exit"
+    # while input != "exit"
       input = gets.strip.downcase
       if input == "yes"
         list_of_desserts
       elsif input == "no" || "exit"
-        input = "exit"
+      # binding.pry
+         input = "exit"
         closing
       else
         puts "Invalid entry. Please enter yes or no"
       end 
-    end
+    # end
   end 
   
   
@@ -37,7 +38,7 @@ class Bestdessertsof2019Cli::CLI
     # 5.french roll
     # Doc
     
-    @desserts = Bestdessertsof2019Cli::Dessert.all
+    @desserts = Bestdessertsof2019Cli::Dessert.list
     option_2
   end
   
@@ -61,7 +62,7 @@ class Bestdessertsof2019Cli::CLI
       elsif input == "list"
         list_of_desserts
       elsif input == "exit"
-        input = "exit"
+        # input = "exit"
         closing
         # puts "Thank you for visiting. See you soon..."
       else 
