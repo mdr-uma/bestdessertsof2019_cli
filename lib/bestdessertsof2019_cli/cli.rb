@@ -2,7 +2,9 @@ class Bestdessertsof2019Cli::CLI
   
   def call
     puts ""
-    puts "Welcome to Best Desserts of 2019!" 
+    puts "* * * * * * * * * * * * * * * * * * *"
+    puts "* Welcome to Best Desserts of 2019! *" 
+    puts "* * * * * * * * * * * * * * * * * * *" 
     puts ""
     option_1
   end
@@ -43,7 +45,7 @@ class Bestdessertsof2019Cli::CLI
     input = nil
      while input != "exit"
       puts ""
-      puts "If you want any more info about particular dish, enter number of that dish or type list to see the all list again or type exit:"
+      puts "If you want cute little note about particular dessert, enter a number of that dessert or type list to see the all list again or type exit:"
       
         input = gets.strip
         
@@ -52,23 +54,21 @@ class Bestdessertsof2019Cli::CLI
           puts ""
           sleep 1
           puts @desserts.description[input.to_i - 1]
-          puts ""
         elsif input == "list"
         list_of_desserts
           puts ""
         elsif input == "exit"
           input = "exit"
-          puts ""
+           puts ""
           closing
         else 
           puts "That number does not exist, please enter a right number."
-          puts ""
         end
       end
     end
 
     def closing
-      puts "Thank you for visiting. See you soon..."
+      puts "<---Thank you for visiting. See you soon!--->"
     end
   
 end

@@ -5,11 +5,8 @@ class Bestdessertsof2019Cli::Dessert
   
   def self.list
     puts ""
-    puts "* * * * * * * * * * * *"
-    puts "*                     *"
-    puts "* Here are the Lists! *"
-    puts "*                     *"
-    puts "* * * * * * * * * * * *"
+    puts " Here are the Lists! "
+    puts "---------------------"
     puts ""
     self.scrape_purewow
   end
