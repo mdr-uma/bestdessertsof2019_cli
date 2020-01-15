@@ -4,38 +4,43 @@ class Bestdessertsof2019Cli::CLI
     puts "Welcome to Best Desserts of 2019!" 
     option_1
     # list_of_desserts
-    # options
     # closing
   end
   
-    def option_1
+  def option_1
     puts "Take a quick peek at some tasty desserts?"
     puts "Enter: yes / no"
     input = nil 
      while input != "exit"
-      input = gets.strip.downcase
+        input = gets.strip.downcase
       
       if input == "yes"
         list_of_desserts
       elsif input == "no" || "exit"
-      # binding.pry
         input = "exit"
         closing
       else
         puts "Invalid entry. Please enter yes or no"
       end 
-     end
+    end
   end 
   
   
   def list_of_desserts
     @desserts = Bestdessertsof2019Cli::Dessert.list
-     @desserts.each do |list|
-      # binding.pry
+     @desserts.name.each do |list|
        puts "#{list}"
      end
      option_2
   end
+  
+  # def list_of_descriptions
+  #   @descriptions = Bestdessertsof2019Cli::Dessert.description
+  #   @descriptions.each do |description|
+  #     puts "#{description}"
+  #   end
+  # end
+  
   
   def option_2
     input = nil
@@ -44,7 +49,10 @@ class Bestdessertsof2019Cli::CLI
         input = gets.strip
         
         if input.to_i > 0
-          puts @desserts[input.to_i - 1]
+          puts @desserts.name[input.to_i - 1]
+          puts ""
+          sleep 1
+          puts @desserts.description[input.to_i - 1]
         elsif input == "list"
         list_of_desserts
         elsif 
