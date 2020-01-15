@@ -8,10 +8,10 @@ class Bestdessertsof2019Cli::CLI
     puts "* * * * * * * * * * * * * * * * * * *".green
     puts ""
     sleep 2.0
-    option_1
+    opening
   end
   
-  def option_1
+  def opening
     puts "Take a quick peek at some TASTY DESSERTS???"
     puts ""
     puts "Enter: yes / no".black.on_yellow.bold
@@ -44,11 +44,11 @@ class Bestdessertsof2019Cli::CLI
        puts "#{list}".blue.bold
       # binding.pry
      end
-     option_2
+     choose_option
    end
    
 
-  def option_2
+  def choose_option
     input = nil
      while input != "exit"
       puts ""
