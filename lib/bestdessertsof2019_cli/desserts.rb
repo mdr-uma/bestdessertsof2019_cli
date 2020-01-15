@@ -8,6 +8,7 @@ class Bestdessertsof2019Cli::Dessert
     puts " Here are the Lists! "
     puts "---------------------"
     puts ""
+    sleep 2.0
     self.scrape_purewow
   end
 

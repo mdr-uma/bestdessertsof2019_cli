@@ -6,6 +6,7 @@ class Bestdessertsof2019Cli::CLI
     puts "* Welcome to Best Desserts of 2019! *" 
     puts "* * * * * * * * * * * * * * * * * * *" 
     puts ""
+    sleep 2.0
     option_1
   end
   
@@ -18,6 +19,7 @@ class Bestdessertsof2019Cli::CLI
      #while input != "exit"
       input = gets.strip.downcase
       if input == "yes"
+        sleep 1.5
         list_of_desserts
         puts ""
       elsif input == "no" || input == "exit"
@@ -54,6 +56,7 @@ class Bestdessertsof2019Cli::CLI
           puts ""
           sleep 1
           puts @desserts.description[input.to_i - 1]
+          sleep 1.5
         elsif input == "list"
         list_of_desserts
           puts ""
