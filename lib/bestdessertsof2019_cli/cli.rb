@@ -1,50 +1,47 @@
 class Bestdessertsof2019Cli::CLI
   
   def call
+    puts ""
     puts "Welcome to Best Desserts of 2019!" 
+    puts ""
     option_1
-    # list_of_desserts
-    # closing
   end
   
   def option_1
     puts "Take a quick peek at some tasty desserts?"
+    puts ""
     puts "Enter: yes / no"
     input = nil 
-     while input != "exit"
-        input = gets.strip.downcase
-      
+     
+     #while input != "exit"
+      input = gets.strip.downcase
       if input == "yes"
         list_of_desserts
-      elsif input == "no" || "exit"
+        puts ""
+      elsif input == "no" || input == "exit"
         input = "exit"
+        puts ""
         closing
+        puts ""
       else
         puts "Invalid entry. Please enter yes or no"
+        puts ""
       end 
-    end
+    #end
   end 
   
   
   def list_of_desserts
     @desserts = Bestdessertsof2019Cli::Dessert.list
-     @desserts.name.each do |list|
+    @desserts.name.each do |list|
        puts "#{list}"
      end
      option_2
   end
-  
-  # def list_of_descriptions
-  #   @descriptions = Bestdessertsof2019Cli::Dessert.description
-  #   @descriptions.each do |description|
-  #     puts "#{description}"
-  #   end
-  # end
-  
-  
+
   def option_2
     input = nil
-    while input != "exit"
+     while input != "exit"
       puts "If you want any more info about particular dish, enter number of that dish or type list to see the all list again or type exit:"
         input = gets.strip
         
@@ -53,15 +50,18 @@ class Bestdessertsof2019Cli::CLI
           puts ""
           sleep 1
           puts @desserts.description[input.to_i - 1]
+          puts ""
         elsif input == "list"
         list_of_desserts
-        elsif 
+        puts ""
+        elsif input == "exit"
           input = "exit"
           closing
         else 
         puts "That number does not exist, please enter a right number."
-      end
-      end
+        puts ""
+        end
+       end
     end
 
       # if input == "1"
