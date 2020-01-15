@@ -17,23 +17,24 @@ class Bestdessertsof2019Cli::CLI
     puts "Enter: yes / no".black.on_yellow.bold
     input = nil 
      
-     #while input != "exit"
+     while input != "exit"
       input = gets.strip.downcase
       
       if input == "yes"
         sleep 1.5
         list_of_desserts
         puts ""
-      elsif input == "no" || input == "exit"
-        input = "exit"
+      elsif input == "no" #|| input == "exit"
+        #input = "exit"
         puts ""
         closing
         puts ""
+        exit
       else
         puts "Invalid entry. Please enter yes or no"
         puts ""
       end 
-    #end
+    end
   end 
   
   
@@ -65,9 +66,11 @@ class Bestdessertsof2019Cli::CLI
           list_of_desserts
           puts ""
         elsif input == "exit"
-          input = "exit"
+          #input = "exit"
            puts ""
           closing
+          puts ""
+          exit
         else 
           puts "That number does not exist, please enter a right number."
         end
