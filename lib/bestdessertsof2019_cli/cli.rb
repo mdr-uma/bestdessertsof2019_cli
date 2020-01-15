@@ -4,7 +4,7 @@ class Bestdessertsof2019Cli::CLI
   def call
     puts ""
     puts "* * * * * * * * * * * * * * * * * * *".green
-    puts "* Welcome to Best Desserts of 2019! *".green
+    puts "* WELCOME TO BEST DESSERTS OF 2019! *".green
     puts "* * * * * * * * * * * * * * * * * * *".green
     puts ""
     sleep 2.0
@@ -12,7 +12,7 @@ class Bestdessertsof2019Cli::CLI
   end
   
   def option_1
-    puts "Take a quick peek at some tasty desserts?"
+    puts "Take a quick peek at some TASTY DESSERTS???"
     puts ""
     puts "Enter: yes / no".black.on_yellow.bold
     input = nil 
@@ -52,7 +52,7 @@ class Bestdessertsof2019Cli::CLI
     input = nil
      while input != "exit"
       puts ""
-      puts "If you want cute little note about particular dessert, enter a number of that dessert or type list to see the all list again or type exit:".yellow
+      puts "If you want cute little Note about particular Dessert, Enter a number of that Dessert or type List to see the all list again or type exit:".yellow
       
         input = gets.strip
         
@@ -72,7 +72,7 @@ class Bestdessertsof2019Cli::CLI
           puts ""
           exit
         else 
-          puts "That number does not exist, please enter a right number."
+          puts "That number does not exist, Please enter a right number."
         end
       end
     end
