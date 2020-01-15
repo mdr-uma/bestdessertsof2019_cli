@@ -56,7 +56,7 @@ class Bestdessertsof2019Cli::CLI
       
         input = gets.strip
         
-        if input.to_i > 0
+        if input.to_i > 0 && input.to_i < 50
           puts @desserts.name[input.to_i - 1]
           puts ""
           sleep 1
