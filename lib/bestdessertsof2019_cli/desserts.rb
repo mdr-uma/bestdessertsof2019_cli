@@ -4,7 +4,13 @@ class Bestdessertsof2019Cli::Dessert
   attr_accessor :name, :description
   
   def self.list
-    puts "Here are the Lists!"
+    puts ""
+    puts "* * * * * * * * * * * *"
+    puts "*                     *"
+    puts "* Here are the Lists! *"
+    puts "*                     *"
+    puts "* * * * * * * * * * * *"
+    puts ""
     self.scrape_purewow
   end
 

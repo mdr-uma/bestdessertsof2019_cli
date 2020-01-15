@@ -42,7 +42,9 @@ class Bestdessertsof2019Cli::CLI
   def option_2
     input = nil
      while input != "exit"
+      puts ""
       puts "If you want any more info about particular dish, enter number of that dish or type list to see the all list again or type exit:"
+      
         input = gets.strip
         
         if input.to_i > 0
@@ -53,38 +55,18 @@ class Bestdessertsof2019Cli::CLI
           puts ""
         elsif input == "list"
         list_of_desserts
-        puts ""
+          puts ""
         elsif input == "exit"
           input = "exit"
+          puts ""
           closing
         else 
-        puts "That number does not exist, please enter a right number."
-        puts ""
+          puts "That number does not exist, please enter a right number."
+          puts ""
         end
-       end
+      end
     end
 
-      # if input == "1"
-      #   puts "more info on 1.."
-      # elsif input == "2"
-      #   puts "more info on 2.."
-      # elsif input == "3"
-      #   puts "more info on 3.."
-      # elsif input == "4"
-      #   puts "more info on 4.."
-      # elsif input == "5"
-      #   puts "more info on 5.."
-      # elsif input == "list"
-      #   list_of_desserts
-      # elsif input == "exit"
-      #   # input = "exit"
-      #   closing
-      #   # puts "Thank you for visiting. See you soon..."
-      # else 
-      #   puts "That number does not exist, please enter right a number."
-      # end
-    
-    
     def closing
       puts "Thank you for visiting. See you soon..."
     end
