@@ -1,3 +1,4 @@
+require 'colorize'
 
 class Bestdessertsof2019Cli::Dessert
   
@@ -5,8 +6,8 @@ class Bestdessertsof2019Cli::Dessert
   
   def self.list
     puts ""
-    puts " Here are the Lists! "
-    puts "---------------------"
+    puts " Here are the Lists! ".red
+    puts "---------------------".red
     puts ""
     sleep 2.0
     self.scrape_purewow

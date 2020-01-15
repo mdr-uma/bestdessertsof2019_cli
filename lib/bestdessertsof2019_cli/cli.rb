@@ -1,10 +1,11 @@
+require 'colorize'
 class Bestdessertsof2019Cli::CLI
   
   def call
     puts ""
-    puts "* * * * * * * * * * * * * * * * * * *"
-    puts "* Welcome to Best Desserts of 2019! *" 
-    puts "* * * * * * * * * * * * * * * * * * *" 
+    puts "* * * * * * * * * * * * * * * * * * *".green
+    puts "* Welcome to Best Desserts of 2019! *".green
+    puts "* * * * * * * * * * * * * * * * * * *".green
     puts ""
     sleep 2.0
     option_1
@@ -13,7 +14,7 @@ class Bestdessertsof2019Cli::CLI
   def option_1
     puts "Take a quick peek at some tasty desserts?"
     puts ""
-    puts "Enter: yes / no"
+    puts "Enter: yes / no".black.on_yellow.bold
     input = nil 
      
      #while input != "exit"
@@ -47,7 +48,7 @@ class Bestdessertsof2019Cli::CLI
     input = nil
      while input != "exit"
       puts ""
-      puts "If you want cute little note about particular dessert, enter a number of that dessert or type list to see the all list again or type exit:"
+      puts "If you want cute little note about particular dessert, enter a number of that dessert or type list to see the all list again or type exit:".yellow
       
         input = gets.strip
         
@@ -71,7 +72,7 @@ class Bestdessertsof2019Cli::CLI
     end
 
     def closing
-      puts "<---Thank you for visiting. See you soon!--->"
+      puts "<---Thank you for visiting. See you soon!--->".black.on_white.bold
     end
   
 end
