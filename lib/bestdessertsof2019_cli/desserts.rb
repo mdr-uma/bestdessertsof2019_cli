@@ -6,8 +6,9 @@ class Bestdessertsof2019Cli::Dessert
   
   def self.list
     puts ""
-    puts " Here are the Lists! ".red
-    puts "---------------------".red
+    puts "---------------------".red.bold
+    puts " Here are the Lists! ".red.bold
+    puts "---------------------".red.bold
     puts ""
     sleep 2.0
     self.scrape_purewow

@@ -19,6 +19,7 @@ class Bestdessertsof2019Cli::CLI
      
      #while input != "exit"
       input = gets.strip.downcase
+      
       if input == "yes"
         sleep 1.5
         list_of_desserts
@@ -39,10 +40,12 @@ class Bestdessertsof2019Cli::CLI
   def list_of_desserts
     @desserts = Bestdessertsof2019Cli::Dessert.list
     @desserts.name.each do |list|
-       puts "#{list}"
+       puts "#{list}".blue.bold
+      # binding.pry
      end
      option_2
-  end
+   end
+   
 
   def option_2
     input = nil
@@ -59,7 +62,7 @@ class Bestdessertsof2019Cli::CLI
           puts @desserts.description[input.to_i - 1]
           sleep 1.5
         elsif input == "list"
-        list_of_desserts
+          list_of_desserts
           puts ""
         elsif input == "exit"
           input = "exit"
