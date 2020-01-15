@@ -41,7 +41,7 @@ class Bestdessertsof2019Cli::CLI
   def list_of_desserts
     @desserts = Bestdessertsof2019Cli::Dessert.list
     @desserts.name.each do |list|
-       puts "#{list}".blue.bold
+       puts "#{list}"
       # binding.pry
      end
      choose_option
@@ -72,7 +72,7 @@ class Bestdessertsof2019Cli::CLI
           puts ""
           exit
         else 
-          puts "That number does not exist, Please enter a right number."
+          puts "That number does not exist, Please enter a right number.".red
         end
       end
     end

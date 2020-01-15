@@ -9,9 +9,9 @@ class Bestdessertsof2019Cli::Dessert
     puts "AWESOME!!!"
     sleep 1.5
     puts ""
-    puts "---------------------".red.bold
-    puts " Here Are The Lists! ".red.bold
-    puts "---------------------".red.bold
+    puts "---------------------".blue.bold
+    puts " Here Are The Lists! ".blue.bold
+    puts "---------------------".blue.bold
     puts ""
     sleep 2.0
     self.scrape_purewow
