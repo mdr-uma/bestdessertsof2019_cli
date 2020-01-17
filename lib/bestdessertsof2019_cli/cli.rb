@@ -2,16 +2,16 @@ require 'colorize'
 class Bestdessertsof2019Cli::CLI
   
   def call
+    opening
+  end
+  
+  def opening
     puts ""
     puts "* * * * * * * * * * * * * * * * * * *".green
     puts "* WELCOME TO BEST DESSERTS OF 2019! *".green
     puts "* * * * * * * * * * * * * * * * * * *".green
     puts ""
     sleep 2.0
-    opening
-  end
-  
-  def opening
     puts "Take a quick peek at some TASTY DESSERTS???"
     puts ""
     puts "Enter: yes / no".black.on_yellow.bold
@@ -24,8 +24,7 @@ class Bestdessertsof2019Cli::CLI
         sleep 1.5
         list_of_desserts
         puts ""
-      elsif input == "no" #|| input == "exit"
-        #input = "exit"
+      elsif input == "no"
         puts ""
         closing
         puts ""
@@ -42,7 +41,6 @@ class Bestdessertsof2019Cli::CLI
     @desserts = Bestdessertsof2019Cli::Dessert.list
     @desserts.name.each do |list|
        puts "#{list}"
-      # binding.pry
      end
      choose_option
    end
@@ -52,7 +50,7 @@ class Bestdessertsof2019Cli::CLI
     input = nil
      while input != "exit"
       puts ""
-      puts "If you want cute little Note about particular Dessert, Enter a number of that Dessert or type List to see the all list again or type exit:".yellow
+      puts "If you want cute little Note about particular Dessert, Enter a number of that Dessert or type List to see all the list again or type exit:".yellow
       
         input = gets.strip
         
@@ -66,8 +64,7 @@ class Bestdessertsof2019Cli::CLI
           list_of_desserts
           puts ""
         elsif input == "exit"
-          #input = "exit"
-           puts ""
+          puts ""
           closing
           puts ""
           exit
