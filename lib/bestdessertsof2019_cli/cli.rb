@@ -69,6 +69,7 @@ class Bestdessertsof2019Cli::CLI
           puts ""
           exit
         else 
+          puts ""
           puts "That number does not exist, Please enter a right number.".red
         end
       end
