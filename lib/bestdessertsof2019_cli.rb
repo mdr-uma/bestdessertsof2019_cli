@@ -1,6 +1,6 @@
 #this is my enviroment file
 require 'open-uri'
-require 'pry'
+# require 'pry'
 require 'nokogiri'
  require 'rake'
 

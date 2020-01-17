@@ -19,10 +19,11 @@ class Bestdessertsof2019Cli::Dessert
 
   
   def self.scrape_purewow
-    doc = Nokogiri::HTML(open("https://www.purewow.com/food/best-desserts-2019"))
+    web_page = Nokogiri::HTML(open("https://www.purewow.com/food/best-desserts-2019"))
     dessert = self.new
-    dessert.name = doc.css(".description").collect {|heading| heading.css("h2").text}
-    dessert.description = doc.css(".description").collect {|paragraph| paragraph.css("p").text.gsub("Get the recipe", "")}
+    doc = web_page.css(".post").children.css(".description")
+    dessert.name = doc.collect {|title| title.css("h2").text}
+    dessert.description = doc.collect {|note| note.css("p").text.gsub("Get the recipe", "")}
     dessert
   end
   
