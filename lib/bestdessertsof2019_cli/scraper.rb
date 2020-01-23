@@ -7,7 +7,7 @@ class Bestdessertsof2019Cli::Scraper
     desserts.collect do |dessert|
       name = dessert.css("h2").text
       description = dessert.css("p").text.gsub("Get the recipe", "")
-      Bestdessertsof2019Cli::Dessert.new(name, dessert)
+      Bestdessertsof2019Cli::Dessert.new(name, description)
     end
   end
 end
