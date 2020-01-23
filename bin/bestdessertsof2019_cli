@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-#puts "Hello World"
 
 require_relative '../lib/bestdessertsof2019_cli'
 

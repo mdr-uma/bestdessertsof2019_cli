@@ -7,4 +7,6 @@ require 'nokogiri'
 require_relative './bestdessertsof2019_cli/version'
 require_relative 'bestdessertsof2019_cli/cli'
 require_relative 'bestdessertsof2019_cli/desserts'
+require_relative 'bestdessertsof2019_cli/scraper'
+
 
